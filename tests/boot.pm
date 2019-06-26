@@ -24,8 +24,14 @@ sub run {
     # press enter to boot right away
     send_key 'ret';
 
-    # wait for the desktop to appear
-    assert_screen 'desktop', 300;
+    assert_screen 'login', 300;
+
+    type_string "root\n";
+    type_string "nots3cr3t\n";
+    wait_still_screen(2);
+    type_string "clear\n";
+
+    assert_screen 'logged-in', 300;
 }
 
 1;
