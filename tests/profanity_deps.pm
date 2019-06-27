@@ -33,6 +33,7 @@ sub run {
     assert_script_run 'make';
     wait_still_screen 5;
     assert_screen 'makeprofanity';
+    assert_script_run 'make install';
 }
 
 1;

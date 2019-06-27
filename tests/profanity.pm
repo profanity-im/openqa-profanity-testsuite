@@ -1,4 +1,3 @@
-# Copyright (C) 2014-2018 SUSE LLC
 # Copyright (C) 2019 Michael Vetter <jubalh@iodoru.org>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -12,16 +11,15 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program; if not, write to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+# with this program; if not, see <http://www.gnu.org/licenses/>.
 
+use base 'basetest';
 use strict;
 use testapi;
-use autotest;
 
-autotest::loadtest 'tests/boot.pm';
-autotest::loadtest 'tests/setup_prosody.pm';
-autotest::loadtest 'tests/profanity_deps.pm';
-autotest::loadtest 'tests/profanity.pm';
+sub run {
+    script_run 'profanity', timeout => 0;
+    assert_screen 'launchprofanity';
+}
 
 1;

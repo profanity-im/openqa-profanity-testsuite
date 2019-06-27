@@ -1,0 +1,36 @@
+{
+  "area": [
+    {
+      "xpos": 61,
+      "ypos": 0,
+      "width": 432,
+      "height": 149,
+      "type": "match"
+    },
+    {
+      "xpos": 941,
+      "ypos": 1,
+      "width": 77,
+      "height": 18,
+      "type": "match"
+    },
+    {
+      "xpos": 989,
+      "ypos": 730,
+      "width": 30,
+      "height": 30,
+      "type": "match"
+    },
+    {
+      "xpos": 71,
+      "ypos": 223,
+      "width": 548,
+      "height": 96,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "launchprofanity"
+  ]
+}
