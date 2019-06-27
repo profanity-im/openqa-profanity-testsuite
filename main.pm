@@ -1,4 +1,5 @@
 # Copyright (C) 2014-2018 SUSE LLC
+# Copyright (C) 2019 Michael Vetter <jubalh@iodoru.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,5 +21,6 @@ use autotest;
 
 autotest::loadtest 'tests/boot.pm';
 autotest::loadtest 'tests/setup_prosody.pm';
+autotest::loadtest 'tests/profanity_deps.pm';
 
 1;
