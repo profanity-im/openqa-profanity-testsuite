@@ -11,14 +11,19 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with this program; if not, write to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+# with this program; if not, see <http://www.gnu.org/licenses/>.
 
+use base 'basetest';
 use strict;
 use testapi;
-use autotest;
 
-autotest::loadtest 'tests/boot.pm';
-autotest::loadtest 'tests/setup_prosody.pm';
+sub run {
+    script_run 'zypper ref';
+    script_run 'zypper in -y prosody';
+    script_run 'clear';
+    script_run 'which prosody';
+
+    assert_screen 'installed', 300;
+}
 
 1;
