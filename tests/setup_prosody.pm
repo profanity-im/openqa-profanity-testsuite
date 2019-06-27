@@ -24,6 +24,11 @@ sub run {
     script_run 'which prosody';
 
     assert_screen 'installed', 300;
+
+    script_run 'systemctl start prosody';
+    script_run 'systemctl status prosody';
+
+    assert_screen 'startprosody';
 }
 
 1;
