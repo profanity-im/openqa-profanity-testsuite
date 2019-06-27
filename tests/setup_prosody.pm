@@ -33,6 +33,10 @@ sub run {
     script_run 'systemctl status prosody';
 
     assert_screen 'startprosody';
+
+    # create users
+    assert_script_run 'prosodyctl register schiller localhost glocke';
+    assert_script_run 'prosodyctl register goethe localhost faust';
 }
 
 1;
