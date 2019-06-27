@@ -27,8 +27,16 @@ sub run {
     type_string "\n";
     wait_still_screen 5;
     assert_screen 'connectfail';
-    type_string "/tls allow\n";
+
+    type_string "/tls always\n";
     assert_screen 'connectfail2';
+
+    type_string "/connect schiller\@localhost\n";
+    wait_still_screen 10;
+    assert_screen 'connect';
+    type_string "glocke\n";
+    wait_still_screen 5;
+    assert_screen 'connectschillersuccess';
 }
 
 1;

@@ -1,0 +1,43 @@
+{
+  "area": [
+    {
+      "xpos": 764,
+      "ypos": 2,
+      "width": 253,
+      "height": 144,
+      "type": "match"
+    },
+    {
+      "xpos": 72,
+      "ypos": 735,
+      "width": 230,
+      "height": 15,
+      "type": "match"
+    },
+    {
+      "xpos": 74,
+      "ypos": 708,
+      "width": 243,
+      "height": 10,
+      "type": "match"
+    },
+    {
+      "xpos": 361,
+      "ypos": 698,
+      "width": 354,
+      "height": 27,
+      "type": "match"
+    },
+    {
+      "xpos": 988,
+      "ypos": 730,
+      "width": 33,
+      "height": 26,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "connectschillersuccess"
+  ]
+}
