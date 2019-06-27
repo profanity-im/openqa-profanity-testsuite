@@ -1,0 +1,43 @@
+{
+  "area": [
+    {
+      "xpos": 761,
+      "ypos": 1,
+      "width": 257,
+      "height": 148,
+      "type": "match"
+    },
+    {
+      "xpos": 66,
+      "ypos": 5,
+      "width": 388,
+      "height": 150,
+      "type": "match"
+    },
+    {
+      "xpos": 68,
+      "ypos": 738,
+      "width": 215,
+      "height": 12,
+      "type": "match"
+    },
+    {
+      "xpos": 996,
+      "ypos": 734,
+      "width": 20,
+      "height": 22,
+      "type": "match"
+    },
+    {
+      "xpos": 346,
+      "ypos": 335,
+      "width": 352,
+      "height": 15,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "connect-goethe-success"
+  ]
+}

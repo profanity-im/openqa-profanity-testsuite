@@ -40,6 +40,13 @@ sub first_instance {
 }
 
 sub second_instance {
+    script_run 'profanity', timeout => 0;
+    assert_screen 'launchprofanity';
+
+    type_string "/connect goethe\@localhost\n";
+    wait_still_screen 10;
+    type_string "faust\n";
+    assert_screen 'connect-goethe-success';
 }
 
 sub run {
