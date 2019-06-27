@@ -17,7 +17,7 @@ use base 'basetest';
 use strict;
 use testapi;
 
-sub run {
+sub first_instance {
     script_run 'profanity', timeout => 0;
     assert_screen 'launchprofanity';
 
@@ -37,6 +37,23 @@ sub run {
     type_string "glocke\n";
     wait_still_screen 5;
     assert_screen 'connectschillersuccess';
+}
+
+sub second_instance {
+}
+
+sub run {
+    first_instance;
+
+    select_console "console2";
+    type_string "root\n";
+    type_string "nots3cr3t\n";
+    wait_still_screen(2);
+    type_string "clear\n";
+
+    assert_screen 'logged-in', 300;
+
+    second_instance;
 }
 
 1;

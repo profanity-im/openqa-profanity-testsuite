@@ -18,7 +18,7 @@ use strict;
 use testapi;
 
 sub run {
-    assert_script_run 'zypper in -y automake autoconf libtool glib2-devel gtk2-devel libcurl-devel libexpat-devel libgpgme-devel libmesode-devel libnotify-devel libotr-devel libuuid-devel ncurses-devel python3-devel readline-devel autoconf-archive libsignal-protocol-c-devel libgcrypt-devel git gcc make', 300;
+    assert_script_run 'zypper in -y automake autoconf libtool glib2-devel gtk2-devel libcurl-devel libexpat-devel libgpgme-devel libmesode-devel libnotify-devel libotr-devel libuuid-devel ncurses-devel python3-devel readline-devel autoconf-archive libsignal-protocol-c-devel libgcrypt-devel git gcc make', 600;
     #wait_still_screen 5;
 
     assert_script_run 'clear';

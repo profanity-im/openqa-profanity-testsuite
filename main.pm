@@ -19,6 +19,10 @@ use strict;
 use testapi;
 use autotest;
 
+my $distri = testapi::get_required_var('CASEDIR') . '/lib/profdistrib.pm';
+require $distri;
+testapi::set_distribution(profdistrib->new());
+
 autotest::loadtest 'tests/boot.pm';
 autotest::loadtest 'tests/setup_prosody.pm';
 autotest::loadtest 'tests/profanity_deps.pm';
