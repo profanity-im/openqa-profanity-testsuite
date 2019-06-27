@@ -25,6 +25,10 @@ sub run {
 
     assert_screen 'installed', 300;
 
+    script_run 'sed -i "s/--Component \"conference.example.com\" \"muc\"/Component \"conference.localhost\" \"muc\"/" /etc/prosody/prosody.cfg.lua';
+    script_run 'sed -i "s/--modules_enabled = { \"muc_mam\" }/modules_enabled = { \"muc_mam\" }/" /etc/prosody/prosody.cfg.lua';
+    script_run 'clear';
+
     script_run 'systemctl start prosody';
     script_run 'systemctl status prosody';
 
