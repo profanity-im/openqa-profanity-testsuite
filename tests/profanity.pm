@@ -20,6 +20,15 @@ use testapi;
 sub run {
     script_run 'profanity', timeout => 0;
     assert_screen 'launchprofanity';
+
+    type_string "/connect schiller\@localhost\n";
+    wait_still_screen 10;
+    assert_screen 'connect';
+    type_string "\n";
+    wait_still_screen 5;
+    assert_screen 'connectfail';
+    type_string "/tls allow\n";
+    assert_screen 'connectfail2';
 }
 
 1;
