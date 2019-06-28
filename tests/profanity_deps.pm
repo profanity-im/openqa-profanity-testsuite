@@ -19,19 +19,16 @@ use testapi;
 
 sub run {
     assert_script_run 'zypper in -y automake autoconf libtool glib2-devel gtk2-devel libcurl-devel libexpat-devel libgpgme-devel libmesode-devel libnotify-devel libotr-devel libuuid-devel ncurses-devel python3-devel readline-devel autoconf-archive libsignal-protocol-c-devel libgcrypt-devel git gcc make', 600;
-    #wait_still_screen 5;
 
     assert_script_run 'clear';
     assert_script_run 'pwd';
     assert_script_run 'git clone https://github.com/profanity-im/profanity', 300;
-    #wait_still_screen 15;
     assert_screen 'gitclonedprof';
 
     assert_script_run 'cd profanity';
     assert_script_run 'autoreconf -fi';
     assert_script_run './configure';
     assert_script_run 'make';
-    wait_still_screen 5;
     assert_screen 'makeprofanity';
     assert_script_run 'make install';
 }
