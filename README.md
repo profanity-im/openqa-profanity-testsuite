@@ -24,3 +24,4 @@ Use this number to clone the job:
 openqa-clone-job --skip-chained-deps --host http://localhost/ --from https://openqa.opensuse.org --show-progress 973501 TEST=proftest DISTRI=openqa-profanity
 ```
 
+Navigate to http://localhost/tests to see the test results.
